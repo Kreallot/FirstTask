@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.1)
+project(Task1)
+add_library(Task1 SHARED src/func.c)
+add_executable(Task1.tests tests/Task1.tests.cpp)
+target_link_libraries(Task1.tests Task1 gtest gtest_main pthread)
